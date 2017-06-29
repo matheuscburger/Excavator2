@@ -7,6 +7,7 @@ use strict;
 use File::Path;
 use Cwd 'abs_path';
 #use Forks::Super;
+use File::Basename;
 
 my ($target,$assembly,$MAPQ,$Program_Folder_Path,$Input_File_Path);
 my ($record,@words,@unlinkfiles,@SamplesVect);
@@ -39,12 +40,7 @@ $man and pod2usage (-verbose=>2, -exitval=>1, -output=>\*STDOUT);
 my ($myscript,$workingfolder,$L1,$L2);
 
 $myscript = abs_path($0);
-$L1=length($myscript);
-$L2=length($0);
-$workingfolder=substr $myscript, 0, ($L1 - $L2 - 1);
-
-
-$Program_Folder_Path="$workingfolder";
+$Program_Folder_Path= dirname $myscript;
 
 
 $Input_File_Path=$ARGV[0];
