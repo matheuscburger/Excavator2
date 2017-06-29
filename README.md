@@ -23,3 +23,6 @@ wget -O data/GCA_000001405.15_GRCh38.bw "https://www.dropbox.com/s/soshiqrayggu2
 
 If you don't want to download the files files from dropbox you can download the files from SourceForge.
 
+## Problems
+- You must create the directory "data/targets" inside the instalation/repository directory.
+- You must have write permission in the instalation directory
